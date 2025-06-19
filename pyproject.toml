@@ -1,28 +1,27 @@
-[project]
-name = "scandbot"
+[tool.poetry]
+name = "scanbot"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Anjitha",email = "anjitha.m@cubettech.com"}
-]
+authors = ["Akhil Anilkumar <akhil.anilkumar@cubettech.com>"]
 readme = "README.md"
-requires-python = ">=3.11,<3.12"
-dependencies = [
-    "fastapi (>=0.115.9,<0.116.0)",
-    "openai (>=1.86.0,<2.0.0)",
-    "dotenv (>=0.9.9,<0.10.0)",
-    "uvicorn (>=0.34.3,<0.35.0)",
-    "llama-parse (>=0.6.32,<0.7.0)",
-    "langchain-chroma (>=0.2.4,<0.3.0)",
-    "langchain (>=0.3.25,<0.4.0)",
-    "langchain-openai (>=0.3.23,<0.4.0)",
-    "langchain-community (>=0.3.25,<0.4.0)",
-    "python-multipart (>=0.0.20,<0.0.21)",
-    "streamlit (>=1.45.1,<2.0.0)",
-    "langgraph (>=0.4.8,<0.5.0)"
-]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.13"
+uvicorn = "^0.34.3"
+python-dotenv = "^1.1.0"
+llama-parse = "^0.6.34"
+langchain-chroma = "^0.2.4"
+langgraph = "^0.4.8"
+langchain-openai = "^0.3.24"
+langchain-community = "^0.3.25"
+python-multipart = "^0.0.20"
+streamlit = "^1.46.0"
+protobuf = "3.20"
+chromadb = "^1.0.13"
 
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

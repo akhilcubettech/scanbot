@@ -2,12 +2,15 @@ import os
 
 import chromadb
 from dotenv import load_dotenv
-
 from src.services.embedding import embedding_fn
 
 load_dotenv()
 
-client = chromadb.HttpClient(str(os.getenv("CHROMA")))
+client = chromadb.HttpClient(
+    host=str(os.getenv("CHROMA_HOST")),
+    port=os.getenv("CHROMA_PORT"),
+    ssl=False
+)
 
 
 def create_collection_(collection_name: str):
